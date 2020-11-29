@@ -8,7 +8,7 @@ module.exports = function (gulp, plugins, config) {
             theme.source.js.bootstrap.files,
             theme.source.js.jquery.scripts.files,
             theme.source.js.dir + '**/*.js'
-        ], ['build-advanced-scripts']);
+        ], gulp.series('build-advanced-scripts'));
 
         gulp.watch(theme.source.scss.dir + '**/*.scss', ['build-advanced-styles']);
 

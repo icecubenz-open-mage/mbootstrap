@@ -30,7 +30,7 @@ module.exports = function(config) {
         dir: theme.path.skin.dir + 'fonts/'
     }
 
-    // Botstrap
+    // Bootstrap
     theme.path.bootstrap = {
         dir: config.path.vendor.dir + 'twbs/bootstrap-sass/'
     }
@@ -126,15 +126,14 @@ module.exports = function(config) {
     // Plugins
     theme.plugins = {
         autoprefixer: {
-            browsers:   ['last 2 versions'],
             cascade:    false
         },
         sass: {
             errLogToConsole:    true,
             style:              'expanded'
         },
-        minifyCss: {
-            keepSpecialComments: 0
+        cleanCSS: {
+            specialComments: 0
         },
         cssBase64: {
             extensionsAllowed:  ['.gif', '.jpg', '.png']

@@ -46,7 +46,6 @@ module.exports = function(config) {
     // Plugins
     theme.plugins = {
         autoprefixer: {
-            browsers:   ['last 2 versions'],
             cascade:    false
         },
         sass: {

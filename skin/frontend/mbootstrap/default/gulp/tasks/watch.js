@@ -8,9 +8,9 @@ module.exports = function (gulp, plugins, config) {
             theme.source.js.bootstrap.files,
             theme.source.js.jquery.scripts.files,
             theme.source.js.dir + '**/*.js'
-        ], ['build-mbootstrap-scripts']);
+        ], gulp.series('build-mbootstrap-scripts'));
 
-        gulp.watch(theme.source.scss.dir + '**/*.scss', ['build-mbootstrap-styles']);
+        gulp.watch(theme.source.scss.dir + '**/*.scss', gulp.series('build-mbootstrap-styles'));
 
         cb();
     };

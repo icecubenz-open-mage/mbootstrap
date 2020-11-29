@@ -21,6 +21,6 @@
         }
     ],
     "require": {
-        "twbs/bootstrap-sass": "*"
+        "twbs/bootstrap-sass": "^3.4"
     }
 }

@@ -5,7 +5,8 @@ module.exports = function (gulp, plugins, config) {
 
         var stream =
             gulp.src( theme.build.css.dir )
-                .pipe( plugins.vinylPaths(plugins.del) );
+                .pipe( plugins.vinylPaths(plugins.del) )
+                .pipe( gulp.dest(theme.build.css.dir) );
 
         return cb();
     }

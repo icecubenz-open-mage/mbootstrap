@@ -18,7 +18,7 @@ module.exports = function (gulp, plugins, config) {
                 .pipe(gulp.dest( theme.build.css.dir ))
 
                 .pipe(plugins.rename({suffix: '.min'}))
-                .pipe(plugins.minifyCss())
+                .pipe(plugins.cleanCSS())
                 .pipe(gulp.dest( theme.build.css.dir ));
 
         return stream;
